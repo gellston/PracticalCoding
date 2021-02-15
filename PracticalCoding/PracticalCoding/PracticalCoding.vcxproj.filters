@@ -15,8 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SmartPointer.cpp">
+    <ClCompile Include="PracticalCoding.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="pimpl_test_normal.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pimpl_test_normal.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SmartPointer.cpp" />
+    <ClCompile Include="pimpl_test_normal.cpp" />
+    <ClCompile Include="PracticalCoding.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pimpl_test_normal.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
