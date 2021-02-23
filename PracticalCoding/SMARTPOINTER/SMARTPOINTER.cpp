@@ -17,10 +17,10 @@ public:
 	}
 };
 
-template <typename T>
-class custom_shared_ptr {
+
+template <typename T> class custom_shared_ptr {
 private:
-	T* instance;
+	T * instance;
 public:
 	custom_shared_ptr() = delete;
 	custom_shared_ptr(const custom_shared_ptr&) = delete;
@@ -32,14 +32,22 @@ public:
 		if (instance != nullptr)
 			delete instance;
 	}
+
+	T* get() {
+		return instance;
+	}
 };
 
+std::shared_ptr<dummy> get_test() {
+	std::shared_ptr<dummy> instance2(new dummy());
 
+	return instance2;
+}
 
 void main() {
 
-	custom_shared_ptr<dummy> instance1(new dummy());
 
+	
 	std::shared_ptr<dummy> instance2(new dummy());
 	std::shared_ptr<dummy> instance3(new dummy(), [](dummy* pointer) {
 		delete pointer;
@@ -48,6 +56,10 @@ void main() {
 		delete[] pointer;
 	});
 	
-	dummy* pointer = instance2.get();
-	pointer->test();
+
+	instance2.get()->test();
+
+	instance2->test();
+
+	std::shared_ptr<dummy> instance4 = instance2;
 }

@@ -6,6 +6,8 @@
 #include <string>
 
 
+
+
 class pimpl {
 private:
 	// 멤버 변수를 pimpl에 선언
@@ -29,7 +31,7 @@ public :
 
 
 PIMPL_BASIC::PIMPL_BASIC() : instance(new pimpl()) {
-
+	
 }
 
 PIMPL_BASIC::~PIMPL_BASIC() {

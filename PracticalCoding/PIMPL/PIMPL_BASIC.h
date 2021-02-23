@@ -4,6 +4,8 @@
 #include <iostream>
 
 
+
+
 // pimpl 전방선언 
 class pimpl;
 
@@ -11,7 +13,9 @@ class pimpl;
 //pimpl을 소모할 클래스 정의
 class PIMPL_BASIC {
 private:
-	pimpl* instance;
+	pimpl * instance;
+	
+
 public :
 
 	PIMPL_BASIC();
