@@ -1,17 +1,22 @@
 #pragma once
 
+// Native Header
 #include <string>
 #include "CppTestclass.h"
+
+
+
+
+//Managed Header
 #include "managed_shared_ptr.h"
-
-
 #include <msclr/marshal_cppstd.h>
+
+
 
 
 using namespace System;
 using namespace System::Collections;
 using namespace System::Collections::Generic;
-
 
 namespace HV {
 
@@ -23,9 +28,8 @@ namespace HV {
 
 	public:
 
-
-		TestClass() : _instance(new cppTestClass()) {
-			
+		TestClass() : _instance(new cppTestClass()){
+	
 		}
 
 		~TestClass() {
@@ -36,7 +40,6 @@ namespace HV {
 
 		}
 
-
 		void SetString(System::String^ _value) {
 			std::string native_string = msclr::interop::marshal_as<std::string>(_value);
 			_instance->setString(native_string);
@@ -44,14 +47,7 @@ namespace HV {
 
 		System::String^ GetString() {
 			auto value = _instance->getString();
-
 			return gcnew System::String(value.c_str());
 		}
-
-
-
 	};
-
-
-
 };

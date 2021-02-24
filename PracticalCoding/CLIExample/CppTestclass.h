@@ -4,10 +4,11 @@
 #include <string>
 #include <iostream>
 
+
 class cppTestClass {
 private:
 	std::string value;
-
+	
 
 public:
 
