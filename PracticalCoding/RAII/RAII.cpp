@@ -87,8 +87,12 @@ int bbbbb() {
 
 
 void main() {
+	TEST_MACRO();
 
-	test();
-	bbbbb();
+	int a = 1;
+
+	if (a == 1) {
+		TEST_MACRO();
+	}
 
 }

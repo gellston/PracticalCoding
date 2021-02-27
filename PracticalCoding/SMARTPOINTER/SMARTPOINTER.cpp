@@ -1,5 +1,7 @@
 #include <iostream>
 #include <memory>
+#include <vector>
+#include <array>
 
 
 class dummy {
@@ -36,6 +38,12 @@ public:
 	T* get() {
 		return instance;
 	}
+
+	T* operator->() const {
+		return instance;
+	}
+
+
 };
 
 std::shared_ptr<dummy> get_test() {
@@ -46,20 +54,13 @@ std::shared_ptr<dummy> get_test() {
 
 void main() {
 
-
-	
 	std::shared_ptr<dummy> instance2(new dummy());
+
 	std::shared_ptr<dummy> instance3(new dummy(), [](dummy* pointer) {
 		delete pointer;
 	});
 	std::shared_ptr<unsigned char[]> instance4(new unsigned char[1000], [](unsigned char* pointer) {
 		delete[] pointer;
 	});
-	
 
-	instance2.get()->test();
-
-	instance2->test();
-
-	std::shared_ptr<dummy> instance4 = instance2;
 }

@@ -13,9 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpSimpleExample", "CSha
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CLIExample", "CLIExample\CLIExample.vcxproj", "{3C5B73AC-D601-4135-AAEA-F8B0D3D86930}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpencvWebCamExample", "OpencvWebCamExample\OpencvWebCamExample.csproj", "{DEAE2509-E555-4C67-9D1B-9C8B3AD39EFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpencvWebCamExample", "OpencvWebCamExample\OpencvWebCamExample.csproj", "{DEAE2509-E555-4C67-9D1B-9C8B3AD39EFD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageFilterExample", "ImageFilterExample\ImageFilterExample.vcxproj", "{48631EE1-C82B-40CD-ABD3-2B1BD4CF3272}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmptyConsoleApplication", "EmptyConsoleApplication\EmptyConsoleApplication.vcxproj", "{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmptyCliApplication", "EmptyCliApplication\EmptyCliApplication.vcxproj", "{21CA8DB9-150C-47F9-B941-B448D0776AE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmptyCSharpConsoleApplication", "EmptyCSharpConsoleApplication\EmptyCSharpConsoleApplication.csproj", "{4748F62D-B50A-4104-86C2-7942CA3C142C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +107,38 @@ Global
 		{48631EE1-C82B-40CD-ABD3-2B1BD4CF3272}.Release|x64.Build.0 = Release|x64
 		{48631EE1-C82B-40CD-ABD3-2B1BD4CF3272}.Release|x86.ActiveCfg = Release|Win32
 		{48631EE1-C82B-40CD-ABD3-2B1BD4CF3272}.Release|x86.Build.0 = Release|Win32
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Debug|x64.ActiveCfg = Debug|x64
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Debug|x64.Build.0 = Debug|x64
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Debug|x86.ActiveCfg = Debug|Win32
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Debug|x86.Build.0 = Debug|Win32
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Release|Any CPU.ActiveCfg = Release|Win32
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Release|x64.ActiveCfg = Release|x64
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Release|x64.Build.0 = Release|x64
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Release|x86.ActiveCfg = Release|Win32
+		{296F9AA7-CFD4-4CA7-8A21-8B1CAE61E22F}.Release|x86.Build.0 = Release|Win32
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Debug|x64.ActiveCfg = Debug|x64
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Debug|x64.Build.0 = Debug|x64
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Debug|x86.ActiveCfg = Debug|Win32
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Debug|x86.Build.0 = Debug|Win32
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Release|Any CPU.ActiveCfg = Release|Win32
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Release|x64.ActiveCfg = Release|x64
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Release|x64.Build.0 = Release|x64
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Release|x86.ActiveCfg = Release|Win32
+		{21CA8DB9-150C-47F9-B941-B448D0776AE3}.Release|x86.Build.0 = Release|Win32
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Debug|x64.ActiveCfg = Debug|x64
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Debug|x64.Build.0 = Debug|x64
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Debug|x86.Build.0 = Debug|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Release|x64.ActiveCfg = Release|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Release|x64.Build.0 = Release|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Release|x86.ActiveCfg = Release|Any CPU
+		{4748F62D-B50A-4104-86C2-7942CA3C142C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
