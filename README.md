@@ -16,7 +16,7 @@
 ### C\#
 
 1. ~~WPF - PANEL~~
-2. CLI Example
+2. ~~CLI Example~~
 
 ## SMART POINTER \(idiom\)
 
