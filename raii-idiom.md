@@ -1,10 +1,10 @@
----
-description: 프로그램 함수의 Stack Frame 수명 주기가 끝나는 지점에 맞춰 사용자가 원하는 동작을 추가하는 방법
----
-
 # RAII\(idiom\)
 
-### code
+> 프로그램 함수의 Stack Frame 수명 주기가 끝나는 지점에 맞춰 사용자가 원하는 동작을 추가하는 방법
+
+
+
+### Code
 
 ```cpp
 #include <iostream>
