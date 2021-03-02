@@ -11,7 +11,7 @@
 
 1. [RAII. \(idiom\)](raii-idiom.md)
 2. [PIMPL. \(idiom\)](pimpl-idiom.md)
-3. SMART POINTER
+3. [SMART POINTER](smart-pointer-idiom.md)
 
 ### C\#
 
