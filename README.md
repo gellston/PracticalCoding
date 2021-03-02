@@ -18,7 +18,7 @@
 1. ~~WPF - PANEL~~
 2. ~~CLI Example~~
 
-## SMART POINTER \(idiom\)
+## 
 
 * 자동으로 포인터의 수명을 관리하는 방법
 
