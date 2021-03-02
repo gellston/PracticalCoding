@@ -10,7 +10,7 @@
 ### C++
 
 1. [RAII. \(idiom\)](raii-idiom.md)
-2. PIMPL. \(idiom\)
+2. [PIMPL. \(idiom\)](pimpl-idiom.md)
 3. SMART POINTER
 
 ### C\#
