@@ -87,12 +87,13 @@ int bbbbb() {
 
 
 void main() {
-	TEST_MACRO();
+	TIME_MEASURE(__FUNCTION__, __LINE__)
 
 	int a = 1;
 
 	if (a == 1) {
-		TEST_MACRO();
+		TIME_MEASURE(__FUNCTION__, __LINE__)
+		test();
 	}
 
 }
