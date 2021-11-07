@@ -2,10 +2,10 @@
 
 > API 설계시 헤더의 의존과 멤버 변수를 숨기는 방법
 
-### Code
+### pimpl_basic.h
 
 ```cpp
-// PIMPL_BASIC.h
+// pimpl_basic.h
 #pragma once
 
 #include <iostream>
@@ -16,20 +16,22 @@ class pimpl;
 
 
 //pimpl을 소모할 클래스 정의
-class PIMPL_BASIC {
+class pimpl_basic {
 private:
 	pimpl* instance;
 public :
 
-	PIMPL_BASIC();
-	~PIMPL_BASIC();
+	pimpl_basic();
+	~pimpl_basic();
 
 	void test();
 
 };
 
-
-// PIMPL_BASIC.cpp
+```
+### pimpl_basic.cpp
+```cpp
+// pimpl_basic.cpp
 #include "PIMPL_BASIC.h"
 
 // Header를 숨김
@@ -43,7 +45,6 @@ private:
 public :
 	pimpl(){
 
-	
 	}
 
 	~pimpl() {
@@ -55,33 +56,34 @@ public :
 	}
 };
 
-
-
-PIMPL_BASIC::PIMPL_BASIC() : instance(new pimpl()) {
+pimpl_basic::pimpl_basic() : instance(new pimpl()) {
 
 }
 
-PIMPL_BASIC::~PIMPL_BASIC() {
+pimpl_basic::~pimpl_basic() {
 	if(!instance)
 		delete instance;
 }
 
-void PIMPL_BASIC::test() {
+void pimpl_basic::test() {
 	this->instance->test();
 }
 
+```
 
+### main.cpp
+
+```cpp
 // main.cpp
 // 개발자가 설계한 헤더 이외에 다른 헤더 추가 불필요 
-#include "PIMPL_BASIC.h"
-
-
+#include "pimpl_basic.h"
 
 void main() {
-	PIMPL_BASIC basic;
+	pimpl_basic basic;
 	basic.test();
 
 }
+
 ```
 
 ### Result

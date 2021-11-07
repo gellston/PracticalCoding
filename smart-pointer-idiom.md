@@ -2,8 +2,7 @@
 
 > 자동으로 동적 메모리의 수명을 관리하는 방법
 
-### Code
-
+### dummy.h
 ```cpp
 #include <iostream>
 #include <memory>
@@ -23,7 +22,10 @@ public:
         std::cout << "test" << std::endl;
     }
 };
+```
 
+### custom_shared_ptr.h
+```cpp
 template <typename T>
 class custom_shared_ptr {
 private:
@@ -41,7 +43,13 @@ public:
     }
 };
 
+```
 
+### main.cpp
+```cpp
+
+#include <custom_shared_ptr.h>
+#include <dummy.h>
 
 void main() {
 
