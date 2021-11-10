@@ -25,7 +25,8 @@ namespace MVVMBasic.View
         public MainWindowView()
         {
             InitializeComponent();
-
+            //this.DataContext = App.Current.Services.GetService<MainWindowViewModel>();
+        
         }
     }
 }

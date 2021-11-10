@@ -17,32 +17,37 @@ namespace MVVMBasic.ViewModel
             System.Console.WriteLine("test");
         }
 
-        private string _Text = "";
-        public string Text
+
+        private string _Test = "TEST!!!!";
+        public string Test
         {
             get
             {
-                return _Text;
+                return _Test;
             }
             set
             {
-                //_Text = value;
-                SetProperty(ref _Text, value);
+                SetProperty(ref _Test, value);
             }
         }
 
-        private bool _check = false;
-        public ICommand HitTestCommand
+        private bool _isCheck = false;
+        public ICommand TestCommand
         {
             get => new RelayCommand(() =>
             {
-                _check = !_check;
-                if (_check == true)
-                    this.Text = "check!!";
+
+                _isCheck = !_isCheck;
+
+                if (_isCheck)
+                {
+                    this.Test = "!!!!!!!!!!!!!!!!!!!!!!";
+                }
                 else
-                    this.Text = "non check!!";
+                {
+                    this.Test = "AAAA";
+                }
             });
         }
-
     }
 }

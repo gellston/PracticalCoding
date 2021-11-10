@@ -21,6 +21,8 @@ namespace MVVMBasic
             this.Services = ConfigureServices();
             this.InitializeComponent();
 
+
+            
         }
 
         public new static App Current => (App)Application.Current;
@@ -36,6 +38,8 @@ namespace MVVMBasic
         {
             var services = new ServiceCollection();
 
+            ///services.AddSingleton<MainWindowViewModel>();
+            ///
             services.AddSingleton<MainWindowViewModel>();
 
             return services.BuildServiceProvider(); // IOC 컨테이너 리턴 

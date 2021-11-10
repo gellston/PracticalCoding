@@ -8,29 +8,26 @@
         Title="MainWindow" Height="450" Width="800"
         DataContext="{Binding Source={StaticResource Locator}, Path=MainWindowViewModel}">
 
-
-    <StackPanel>
-        <TextBlock Text="{Binding Text}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontSize="40"></TextBlock>
-        <TextBlock Text="{Binding Text}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontSize="40"></TextBlock>
-        <TextBlock Text="{Binding Text}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontSize="40"></TextBlock>
-        <TextBlock Text="{Binding Text}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontSize="40"></TextBlock>
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="{Binding Test}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"></TextBlock>
+        <TextBlock Text="{Binding Test}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="40"
+                   FontWeight="Bold"></TextBlock>
+        <TextBlock Text="{Binding Test}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="40"></TextBlock>
         <Button Height="100"
-                Content="Check Test"
-                Command="{Binding HitTestCommand}"></Button>
+                Content="TestCommand"
+                Command="{Binding TestCommand}"></Button>
         <Button Height="100"
-                Content="Check Test"
-                Command="{Binding HitTestCommand}"></Button>
+                Content="TestCommand"
+                Command="{Binding TestCommand}"
+                Background="Red"></Button>
     </StackPanel>
 </Window>

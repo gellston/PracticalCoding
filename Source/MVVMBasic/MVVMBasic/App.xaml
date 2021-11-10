@@ -2,9 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MVVMBasic"
-             xmlns:viewModel="clr-namespace:MVVMBasic.ViewModel"
+             xmlns:viewmodel="clr-namespace:MVVMBasic.ViewModel"
              StartupUri="View/MainWindowView.xaml">
     <Application.Resources>
-        <viewModel:ViewModelLocator x:Key="Locator"></viewModel:ViewModelLocator>
+        <viewmodel:ViewModelLocator x:Key="Locator"></viewmodel:ViewModelLocator>
     </Application.Resources>
 </Application>
