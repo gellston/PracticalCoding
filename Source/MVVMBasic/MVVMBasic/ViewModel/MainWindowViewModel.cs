@@ -1,5 +1,6 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
+using MVVMBasic.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,11 @@ namespace MVVMBasic.ViewModel
     public class MainWindowViewModel : ObservableObject
     {
 
-        public MainWindowViewModel()
+        private readonly Service1 service1;
+
+        public MainWindowViewModel(Service1 _service1)
         {
-            System.Console.WriteLine("test");
+            this.service1 = _service1;
         }
 
 
@@ -31,22 +34,12 @@ namespace MVVMBasic.ViewModel
             }
         }
 
-        private bool _isCheck = false;
         public ICommand TestCommand
         {
             get => new RelayCommand(() =>
             {
-
-                _isCheck = !_isCheck;
-
-                if (_isCheck)
-                {
-                    this.Test = "!!!!!!!!!!!!!!!!!!!!!!";
-                }
-                else
-                {
-                    this.Test = "AAAA";
-                }
+                this.Test = this.service1.InputTest("test");
+                
             });
         }
     }

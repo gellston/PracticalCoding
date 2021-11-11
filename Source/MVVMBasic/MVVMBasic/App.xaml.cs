@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using MVVMBasic.Service;
 using MVVMBasic.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -38,9 +39,9 @@ namespace MVVMBasic
         {
             var services = new ServiceCollection();
 
-            ///services.AddSingleton<MainWindowViewModel>();
-            ///
+     
             services.AddSingleton<MainWindowViewModel>();
+            services.AddSingleton<Service1>();
 
             return services.BuildServiceProvider(); // IOC 컨테이너 리턴 
         }
