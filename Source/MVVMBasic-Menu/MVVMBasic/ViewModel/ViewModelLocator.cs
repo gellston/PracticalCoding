@@ -12,7 +12,6 @@ namespace MVVMBasic.ViewModel
 
         public ViewModelLocator()
         {
-            System.Console.WriteLine("Test");
         }
 
         public MainWindowViewModel MainWindowViewModel

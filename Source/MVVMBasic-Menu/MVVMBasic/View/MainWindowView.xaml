@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVMBasic"
+        xmlns:viewmodel="clr-namespace:MVVMBasic.ViewModel"
+        xmlns:view="clr-namespace:MVVMBasic.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         DataContext="{Binding Source={StaticResource Locator}, Path=MainWindowViewModel}">
@@ -13,21 +15,40 @@
             <Button DockPanel.Dock="Top"
                     Height="40"
                     Content="A Menu"
-                    Command="{Binding AMenuCommand}"></Button>
+                    Command="{Binding AMenuCommand}"
+                    CommandParameter="{Binding Source={StaticResource Locator}, Path=AViewModel}"></Button>
             <Button DockPanel.Dock="Top"
                     Height="40"
                     Content="B Menu"
-                    Command="{Binding BMenuCommand}"></Button>
+                    Command="{Binding BMenuCommand}"
+                    CommandParameter="{Binding Source={StaticResource Locator}, Path=BViewModel}"></Button>
             <Button DockPanel.Dock="Top"
                     Height="40"
                     Content="C Menu"
-                    Command="{Binding CMenuCommand}"></Button>
+                    Command="{Binding CMenuCommand}"
+                    CommandParameter="{Binding Source={StaticResource Locator}, Path=CViewModel}"></Button>
             <Button DockPanel.Dock="Top"
                     Height="40"
                     Content="D Menu"
-                    Command="{Binding DMenuCommand}"></Button>
+                    Command="{Binding DMenuCommand}"
+                    CommandParameter="{Binding Source={StaticResource Locator}, Path=DViewModel}"></Button>
             <Border></Border>
         </DockPanel>
-        <ContentPresenter></ContentPresenter>
+        <ContentPresenter Content="{Binding CurrentViewModel, UpdateSourceTrigger=PropertyChanged}">
+            <ContentPresenter.Resources>
+                <DataTemplate DataType="{x:Type viewmodel:AViewModel}">
+                    <view:AView></view:AView>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodel:BViewModel}">
+                    <view:BView></view:BView>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodel:CViewModel}">
+                    <view:CView></view:CView>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodel:DViewModel}">
+                    <view:DView></view:DView>
+                </DataTemplate>
+            </ContentPresenter.Resources>
+        </ContentPresenter>
     </DockPanel>
 </Window>
