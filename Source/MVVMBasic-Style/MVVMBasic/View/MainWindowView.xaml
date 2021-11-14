@@ -1,0 +1,46 @@
+﻿<Window x:Class="MVVMBasic.View.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMBasic"
+        xmlns:view="clr-namespace:MVVMBasic.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainWindowViewModel}">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type DockPanel}" x:Key="DockPanelTopMenuStyle1">
+            <Setter Property="Height" Value="80"></Setter>
+            <Setter Property="DockPanel.Dock" Value="Top"></Setter>
+            <Setter Property="Background" Value="Green"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="DockPanelTopButtonStyle1">
+            <Setter Property="Width" Value="80"></Setter>
+            <Setter Property="Background" Value="Orange"></Setter>
+            <Setter Property="DockPanel.Dock" Value="Left"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="DockPaneTopNewButton" BasedOn="{StaticResource DockPanelTopButtonStyle1}">
+            <Setter Property="Content" Value="New"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="DockPaneTopOpenButton" BasedOn="{StaticResource DockPanelTopButtonStyle1}">
+            <Setter Property="Content" Value="Open"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="DockPaneTopSaveButton" BasedOn="{StaticResource DockPanelTopButtonStyle1}">
+            <Setter Property="Content" Value="Save"></Setter>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <DockPanel Style="{StaticResource DockPanelTopMenuStyle1}">
+            <Button Content="Menu Open"
+                    Width="80"
+                    Command="{Binding OpenMenuCommand}"></Button>
+            <Button Style="{StaticResource DockPaneTopNewButton}"/>
+            <Button Style="{StaticResource DockPaneTopOpenButton}"/>
+            <Button Style="{StaticResource DockPaneTopSaveButton}"/>
+
+            <Border></Border>
+        </DockPanel>
+        <DockPanel Style="{StaticResource MainContentStyle}"></DockPanel>
+    </DockPanel>
+</Window>
