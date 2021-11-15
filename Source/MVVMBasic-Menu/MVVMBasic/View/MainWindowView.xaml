@@ -34,21 +34,47 @@
                     CommandParameter="{Binding Source={StaticResource Locator}, Path=DViewModel}"></Button>
             <Border></Border>
         </DockPanel>
-        <ContentPresenter Content="{Binding CurrentViewModel, UpdateSourceTrigger=PropertyChanged}">
-            <ContentPresenter.Resources>
-                <DataTemplate DataType="{x:Type viewmodel:AViewModel}">
-                    <view:AView></view:AView>
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewmodel:BViewModel}">
-                    <view:BView></view:BView>
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewmodel:CViewModel}">
-                    <view:CView></view:CView>
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewmodel:DViewModel}">
-                    <view:DView></view:DView>
-                </DataTemplate>
-            </ContentPresenter.Resources>
-        </ContentPresenter>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ContentPresenter Content="{Binding CurrentViewModel, UpdateSourceTrigger=PropertyChanged}"
+                              Grid.Row="0">
+                <ContentPresenter.Resources>
+                    <DataTemplate DataType="{x:Type viewmodel:AViewModel}">
+                        <view:AView></view:AView>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewmodel:BViewModel}">
+                        <view:BView></view:BView>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewmodel:CViewModel}">
+                        <view:CView></view:CView>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewmodel:DViewModel}">
+                        <view:DView></view:DView>
+                    </DataTemplate>
+                </ContentPresenter.Resources>
+            </ContentPresenter>
+            <ContentPresenter Content="{Binding CurrentViewModel, UpdateSourceTrigger=PropertyChanged}"
+                              Grid.Row="1">
+                <ContentPresenter.Resources>
+                    <DataTemplate DataType="{x:Type viewmodel:AViewModel}">
+                        <view:ASubView></view:ASubView>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewmodel:BViewModel}">
+                        <view:BView></view:BView>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewmodel:CViewModel}">
+                        <view:CView></view:CView>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewmodel:DViewModel}">
+                        <view:DView></view:DView>
+                    </DataTemplate>
+                </ContentPresenter.Resources>
+            </ContentPresenter>
+        </Grid>
+        
     </DockPanel>
 </Window>
