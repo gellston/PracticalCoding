@@ -7,12 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Style\MainWindowStyle.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Style\TopMenuStyle.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\MainWindowView.xaml">
       <SubType>Designer</SubType>
     </Page>

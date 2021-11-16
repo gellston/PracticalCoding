@@ -5,12 +5,6 @@
              xmlns:viewmodel="clr-namespace:MVVMBasic.ViewModel"
              StartupUri="View/MainWindowView.xaml">
     <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Style/TopMenuStyle.xaml"></ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
-            <viewmodel:ViewModelLocator x:Key="Locator"></viewmodel:ViewModelLocator>
-        </ResourceDictionary>
-       
+        <viewmodel:ViewModelLocator x:Key="Locator"></viewmodel:ViewModelLocator>
     </Application.Resources>
 </Application>

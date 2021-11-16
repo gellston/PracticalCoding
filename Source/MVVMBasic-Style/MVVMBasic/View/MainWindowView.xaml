@@ -10,37 +10,22 @@
         DataContext="{Binding Source={StaticResource Locator}, Path=MainWindowViewModel}">
 
     <Window.Resources>
-        <Style TargetType="{x:Type DockPanel}" x:Key="DockPanelTopMenuStyle1">
-            <Setter Property="Height" Value="80"></Setter>
-            <Setter Property="DockPanel.Dock" Value="Top"></Setter>
-            <Setter Property="Background" Value="Green"></Setter>
-        </Style>
-        <Style TargetType="{x:Type Button}" x:Key="DockPanelTopButtonStyle1">
-            <Setter Property="Width" Value="80"></Setter>
-            <Setter Property="Background" Value="Orange"></Setter>
-            <Setter Property="DockPanel.Dock" Value="Left"></Setter>
-        </Style>
-        <Style TargetType="{x:Type Button}" x:Key="DockPaneTopNewButton" BasedOn="{StaticResource DockPanelTopButtonStyle1}">
-            <Setter Property="Content" Value="New"></Setter>
-        </Style>
-        <Style TargetType="{x:Type Button}" x:Key="DockPaneTopOpenButton" BasedOn="{StaticResource DockPanelTopButtonStyle1}">
-            <Setter Property="Content" Value="Open"></Setter>
-        </Style>
-        <Style TargetType="{x:Type Button}" x:Key="DockPaneTopSaveButton" BasedOn="{StaticResource DockPanelTopButtonStyle1}">
-            <Setter Property="Content" Value="Save"></Setter>
-        </Style>
+
     </Window.Resources>
     <DockPanel>
-        <DockPanel Style="{StaticResource DockPanelTopMenuStyle1}">
-            <Button Content="Menu Open"
-                    Width="80"
-                    Command="{Binding OpenMenuCommand}"></Button>
-            <Button Style="{StaticResource DockPaneTopNewButton}"/>
-            <Button Style="{StaticResource DockPaneTopOpenButton}"/>
-            <Button Style="{StaticResource DockPaneTopSaveButton}"/>
-
+        <!--<DockPanel.Resources>
+            <Style TargetType="{x:Type Button}" x:Key="TopMenuNewButton">
+                <Setter Property="Background" Value="Green"></Setter>
+                <Setter Property="Content" Value="New"></Setter>
+            </Style>
+        </DockPanel.Resources>-->
+        <DockPanel Style="{StaticResource TopMenuPanel}">
+            <Button Style="{StaticResource TopMenuNewButton}"></Button>
+            <Button Style="{StaticResource TopMenuButton}" Content="Open"></Button>
+            <Button Style="{StaticResource TopMenuButton}" Content="Copy"></Button>
             <Border></Border>
         </DockPanel>
-        <DockPanel Style="{StaticResource MainContentStyle}"></DockPanel>
+        <Border></Border>
+
     </DockPanel>
 </Window>
