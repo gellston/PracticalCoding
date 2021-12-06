@@ -21,20 +21,21 @@ namespace VisionAlgorithmExample1.Service
         public ObservableCollection<ImageFile> LoadImageFiles(string path)
         {
 
-            var files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories)
-                                 .Where(filePath => filePath.ToUpper().EndsWith(".JPG") || filePath.ToUpper().EndsWith(".BMP") || filePath.ToUpper().EndsWith(".JPEG"))
-                                 .ToArray();
 
+            var files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories)
+                        .Where(path => path.ToUpper().EndsWith(".JPG") || path.EndsWith(".BMP") || path.EndsWith(".JPEG"));
+                                    
 
             ObservableCollection<ImageFile> temp = new ObservableCollection<ImageFile>();
             foreach(var file in files)
             {
                 temp.Add(new ImageFile()
                 {
-                    FilePath = file,
                     FileName = Path.GetFileName(file),
+                    FilePath = file
                 });
             }
+
             return temp;
         }
     }

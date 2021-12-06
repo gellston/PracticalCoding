@@ -13,6 +13,12 @@
     <PackageReference Include="DevExpress.Wpf.Themes.All" Version="21.2.*-*" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.5.3.20211204" />
+    <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.5.3.20211204" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CliAlgorithm\CliAlgorithm.vcxproj" />
   </ItemGroup>
 
 </Project>
