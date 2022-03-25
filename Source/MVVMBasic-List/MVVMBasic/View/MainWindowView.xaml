@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:MVVMBasic"
         xmlns:model="clr-namespace:MVVMBasic.Model"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ie="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         DataContext="{Binding Source={StaticResource Locator}, Path=MainWindowViewModel}">
@@ -25,12 +27,13 @@
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   ScrollViewer.VerticalScrollBarVisibility="Auto"
                   x:Name="listView1">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="SelectionChanged">
-                    <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
-                                           CommandParameter="{Binding ElementName=listView1 , Path=SelectedItems}"></i:InvokeCommandAction>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
+
+            <behavior:Interaction.Triggers>
+                <behavior:EventTrigger EventName="SelectionChanged">
+                    <behavior:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
+                                                  CommandParameter="{Binding ElementName=listView1, Path=SelectedItem}"></behavior:InvokeCommandAction>
+                </behavior:EventTrigger>
+            </behavior:Interaction.Triggers>
             <ListView.Resources>
                 <DataTemplate DataType="{x:Type model:Student}">
                     <Button Width="80"
