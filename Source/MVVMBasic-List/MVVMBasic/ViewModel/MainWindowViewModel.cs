@@ -46,12 +46,19 @@ namespace MVVMBasic.ViewModel
         {
             get => new RelayCommand<object>((items) =>
              {
-                 var commandArray = (items as ObservableCollection<object>).Cast<Student>().ToList();
+
+                 try
+                 {
+                     var commandArray = (items as ObservableCollection<object>).Cast<Student>().ToList();
 
 
 
-                 System.Diagnostics.Debug.WriteLine("test");
-
+                     System.Diagnostics.Debug.WriteLine("test");
+                 }
+                 catch(Exception ex)
+                 {
+                     System.Diagnostics.Debug.WriteLine(ex.Message);
+                 }
              });
         }
 

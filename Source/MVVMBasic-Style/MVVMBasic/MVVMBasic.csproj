@@ -8,9 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Helper\" />
-    <Folder Include="Service\" />
-    <Folder Include="UC\" />
+    <Compile Remove="Helper\**" />
+    <Compile Remove="Service\**" />
+    <Compile Remove="UC\**" />
+    <EmbeddedResource Remove="Helper\**" />
+    <EmbeddedResource Remove="Service\**" />
+    <EmbeddedResource Remove="UC\**" />
+    <None Remove="Helper\**" />
+    <None Remove="Service\**" />
+    <None Remove="UC\**" />
+    <Page Remove="Helper\**" />
+    <Page Remove="Service\**" />
+    <Page Remove="UC\**" />
   </ItemGroup>
 
   <ItemGroup>
