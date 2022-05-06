@@ -60,6 +60,8 @@ std::shared_ptr<hv::image> hv::cv4::test_get() {
 
 		std::memcpy(resultImage->pointer(), threshod_image.data, size);
 
+		return resultImage;
+
 	}
 	catch (hv::hvexception error) {
 		throw error;
@@ -97,7 +99,7 @@ std::shared_ptr<hv::image> hv::cv4::imread(std::string path, bool isColor) {
 
 		cv::ImreadModes mode = cv::ImreadModes::IMREAD_GRAYSCALE;
 
-		if(isColor = false)
+		if(isColor == false)
 			mode = cv::ImreadModes::IMREAD_GRAYSCALE;
 		else
 			mode = cv::ImreadModes::IMREAD_COLOR;

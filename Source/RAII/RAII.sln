@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RAII", "RAII\RAII.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PIMPL", "PIMPL\PIMPL.vcxproj", "{0E16C892-D511-41CB-A52E-E23C821472C4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PIMPL_TEST", "PIMPL_TEST\PIMPL_TEST.vcxproj", "{630923C0-F015-4145-81C2-CB7A2CC47FA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E16C892-D511-41CB-A52E-E23C821472C4} = {0E16C892-D511-41CB-A52E-E23C821472C4}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +36,14 @@ Global
 		{0E16C892-D511-41CB-A52E-E23C821472C4}.Release|x64.Build.0 = Release|x64
 		{0E16C892-D511-41CB-A52E-E23C821472C4}.Release|x86.ActiveCfg = Release|Win32
 		{0E16C892-D511-41CB-A52E-E23C821472C4}.Release|x86.Build.0 = Release|Win32
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Debug|x64.ActiveCfg = Debug|x64
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Debug|x64.Build.0 = Debug|x64
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Debug|x86.ActiveCfg = Debug|Win32
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Debug|x86.Build.0 = Debug|Win32
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Release|x64.ActiveCfg = Release|x64
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Release|x64.Build.0 = Release|x64
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Release|x86.ActiveCfg = Release|Win32
+		{630923C0-F015-4145-81C2-CB7A2CC47FA6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
