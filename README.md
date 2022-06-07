@@ -10,4 +10,6 @@
 **정리된 내용**
 
 ***C++***  
-1. lambda 
+1. vcpkg 
+2. API와 ABI
+3. Lambda
