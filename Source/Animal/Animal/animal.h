@@ -2,6 +2,7 @@
 #ifndef ANIMAL
 #define ANIMAL
 
+#include <iostream>
 
 namespace pc {
 	class animal {
@@ -21,6 +22,4 @@ namespace pc {
 
 	};
 }
-
-
 #endif
