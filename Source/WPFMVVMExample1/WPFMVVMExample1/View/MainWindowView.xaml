@@ -1,12 +1,21 @@
-﻿<Window x:Class="WPFMVVMExample1.View.MainWindowView"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFMVVMExample1"
+        xmlns:ViewModel="clr-namespace:WPFMVVMExample1.ViewModel" x:Class="WPFMVVMExample1.View.MainWindowView"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <StackPanel Background="Red"
+                    Height="50"
+                    DockPanel.Dock="Top">
+            
+        </StackPanel>
+        <ListView Width="400"
+                  DockPanel.Dock="Left"
+                  ItemsSource="{Binding TextFileModelCollection}"></ListView>
+        <TextBox></TextBox>
+    </DockPanel>
 </Window>

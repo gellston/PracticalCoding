@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace WPFMVVMExample1.Model
 {
-    public class TextFileModel :  ModelBase
+    public class TextFileModel : ModelBase
     {
 
-        #region Private Property
+        #region PrivateProperty
         private string _FileName = "";
         private string _FilePath = "";
-
         #endregion
-
 
         #region Constructor
-        public TextFileModel() {
-        
-        
+        public TextFileModel()
+        {
+
         }
         #endregion
+
 
         #region Public Property
         public string FileName
@@ -30,7 +29,7 @@ namespace WPFMVVMExample1.Model
             set
             {
                 _FileName = value;
-                this.OnPropertyChanged(nameof(FileName));
+                OnPropertyChanged("FileName");
             }
         }
 
@@ -40,12 +39,9 @@ namespace WPFMVVMExample1.Model
             set
             {
                 _FilePath = value;
-                this.OnPropertyChanged(nameof(FilePath));
+                OnPropertyChanged("FilePath");
             }
         }
         #endregion
-
-
-
     }
 }
