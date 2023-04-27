@@ -12,23 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPFMVVMExample1.ViewModel;
 
-namespace WPFMVVMExample1.View
+namespace WPFResourceExample
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindowView : Window
+    public partial class MainWindow : Window
     {
-        public MainWindowView()
+        public MainWindow()
         {
             InitializeComponent();
-
-            this.DataContext = new MainWindowViewModel();
-
         }
-
-   
     }
 }

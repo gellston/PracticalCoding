@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33617.297
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFResourceExample", "WPFResourceExample\WPFResourceExample.csproj", "{773088E7-260E-43ED-8270-E79B986C1BB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{773088E7-260E-43ED-8270-E79B986C1BB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773088E7-260E-43ED-8270-E79B986C1BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773088E7-260E-43ED-8270-E79B986C1BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773088E7-260E-43ED-8270-E79B986C1BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32453157-CC6F-4900-A89E-367F2FC77DE2}
+	EndGlobalSection
+EndGlobal

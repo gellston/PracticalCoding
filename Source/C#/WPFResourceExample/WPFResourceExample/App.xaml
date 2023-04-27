@@ -1,8 +1,8 @@
-﻿<Application x:Class="WPFMVVMExample1.App"
+﻿<Application x:Class="WPFResourceExample.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WPFMVVMExample1"
-             StartupUri="View/MainWindowView.xaml">
+             xmlns:local="clr-namespace:WPFResourceExample"
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
          
     </Application.Resources>
