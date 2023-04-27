@@ -4,9 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFResourceExample"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:Data="clr-namespace:WPFResourceExample.Data"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <sys:String x:Key="strHelloWorld">Hello, world!</sys:String>
+        <Data:Student x:Key="studentObject"
+                      Age="40"
+                      Name="BongHoeKoo">
+            <Data:Student.Address>
+                there is no cow level
+            </Data:Student.Address>
+        </Data:Student>
+    </Window.Resources>
 
-    </Grid>
+    <StackPanel Margin="10">
+        <StackPanel.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="/Resource/Data.xaml"></ResourceDictionary>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </StackPanel.Resources>
+        <TextBlock Text="{StaticResource strHelloWorld}" FontSize="56"
+                   Foreground="{StaticResource textColor}"/>
+        <TextBlock>Just another " <TextBlock Text="{StaticResource strHelloWorld}" /> " example, but with resources!</TextBlock>
+    </StackPanel>
 </Window>
