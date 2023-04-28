@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33617.297
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFContentControlExample", "WPFContentControlExample\WPFContentControlExample.csproj", "{8A5DBAB5-B9D8-424A-A865-6031D251FB79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Debug|x64.ActiveCfg = Debug|x64
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Debug|x64.Build.0 = Debug|x64
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Release|x64.ActiveCfg = Release|x64
+		{8A5DBAB5-B9D8-424A-A865-6031D251FB79}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14A261D5-D1A2-4DF5-A32E-E2DBC2D0FA46}
+	EndGlobalSection
+EndGlobal
