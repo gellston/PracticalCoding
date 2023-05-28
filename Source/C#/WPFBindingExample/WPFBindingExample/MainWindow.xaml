@@ -4,13 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFBindingExample"
+        xmlns:converter="clr-namespace:WPFBindingExample.Converter"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     
     <Window.DataContext>
         <local:BindingObject></local:BindingObject>
     </Window.DataContext>
-    
+
+    <Window.Resources>
+        <converter:DoubleToPercentConverter x:Key="DoubleToPercentConverter"></converter:DoubleToPercentConverter>
+        <converter:SumConverter x:Key="SumConverter"></converter:SumConverter>
+    </Window.Resources>
     <Grid>
   
 
@@ -19,6 +24,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
@@ -68,5 +74,26 @@
         <Button Grid.Row="5"
                 Content="Command Button"
                 Command="{Binding TestCommand}"></Button>
+
+        <UniformGrid Grid.Row="6"
+                     Columns="3"
+                     Rows="1">
+            <TextBlock Text="{Binding Converter={StaticResource DoubleToPercentConverter}, Path=PercentValue, Mode=OneWay}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                <TextBlock.Text>
+                    <MultiBinding Converter="{StaticResource SumConverter}" Mode="OneWay" UpdateSourceTrigger="PropertyChanged">
+                        <Binding Path="Value1" Mode="OneWay" UpdateSourceTrigger="PropertyChanged"></Binding>
+                        <Binding Path="Value2" Mode="OneWay" UpdateSourceTrigger="PropertyChanged"></Binding>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <Button Content="test2"
+                    Command="{Binding TestCommand2}"></Button>
+        </UniformGrid>
     </Grid>
 </Window>

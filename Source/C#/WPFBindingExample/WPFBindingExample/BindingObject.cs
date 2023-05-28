@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Markup;
+using System.Windows.Media.TextFormatting;
 
 namespace WPFBindingExample
 {
@@ -22,6 +23,12 @@ namespace WPFBindingExample
         private ListCollectionView _ListBoxItemCollection = null;
         private ListCollectionView _ListViewItemCollection = null;
         private ListCollectionView _GridViewItemCollection = null;
+
+        private double _PercentValue = 0;
+
+
+        private double _Value1 = 0;
+        private double _Value2 = 0;
 
         #endregion
 
@@ -62,6 +69,35 @@ namespace WPFBindingExample
             {
                 _Temp = value;
                 OnPropertyChanged(nameof(Temp));
+            }
+        }
+
+        public double PercentValue
+        {
+            get => _PercentValue;
+            set
+            {
+                _PercentValue = value;
+                OnPropertyChanged(nameof(PercentValue));
+            }
+        }
+
+        public double Value1
+        {
+            get => _Value1;
+            set
+            {
+                _Value1 = value;
+                OnPropertyChanged(nameof(Value1));
+            }
+        }
+        public double Value2
+        {
+            get => _Value2;
+            set
+            {
+                _Value2 = value;
+                OnPropertyChanged(nameof(Value2));
             }
         }
         #endregion
@@ -126,6 +162,18 @@ namespace WPFBindingExample
                         view.MoveCurrentToNext();
                     }
                 }
+            });
+        }
+
+        public ICommand TestCommand2
+        {
+            get => new RelayCommand((arg) =>
+            {
+                this.PercentValue = 100;
+
+                this.Value1 = 10;
+                this.Value2 = 10;
+
             });
         }
         #endregion
