@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33711.374
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPropertyTriggerExample", "WPFPropertyTriggerExample\WPFPropertyTriggerExample.csproj", "{0DD58F01-F1EF-4889-84D1-D614672DD2F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DD58F01-F1EF-4889-84D1-D614672DD2F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD58F01-F1EF-4889-84D1-D614672DD2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD58F01-F1EF-4889-84D1-D614672DD2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD58F01-F1EF-4889-84D1-D614672DD2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D6FD636-D698-4CE2-AF15-17BEF7F4A623}
+	EndGlobalSection
+EndGlobal
