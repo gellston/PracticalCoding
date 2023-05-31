@@ -29,9 +29,19 @@
                 <Border Background="{TemplateBinding Property=Background}"></Border>
             </Grid>
         </ControlTemplate>
+        <ControlTemplate TargetType="{x:Type Button}">
+            <Grid>
+                <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Panel.ZIndex="1"></ContentPresenter>
+                <Border Background="{TemplateBinding Property=Background}"></Border>
+            </Grid>
+        </ControlTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
