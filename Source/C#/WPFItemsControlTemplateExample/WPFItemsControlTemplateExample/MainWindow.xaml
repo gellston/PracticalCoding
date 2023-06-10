@@ -19,6 +19,10 @@
                            Age="28"></model:Student>
             <model:Student Name="BongHoe Koo"
                            Age="28"></model:Student>
+            
+            
+            
+            
             <ItemsControl.ItemTemplate>
                 <DataTemplate DataType="{x:Type model:Student}">
                     <DockPanel Height="30">
@@ -37,9 +41,14 @@
                       Margin="10">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid></UniformGrid>
+                    <UniformGrid Columns="2"></UniformGrid>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
+          
+            <model:Student Name="BongHoe Koo"
+                           Age="28"></model:Student>
+            <model:Student Name="BongHoe Koo"
+                           Age="28"></model:Student>
             <model:Student Name="BongHoe Koo"
                            Age="28"></model:Student>
             <model:Student Name="BongHoe Koo"

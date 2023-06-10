@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFDataTemplateExample.Model;
 
 namespace WPFDataTemplateExample
 {
@@ -22,7 +23,38 @@ namespace WPFDataTemplateExample
     {
         public MainWindow()
         {
+
+           
             InitializeComponent();
+
+        }
+
+        private bool _toggle = false;
+        private void tesetButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            _toggle = !_toggle;
+
+            if (_toggle)
+            {
+                this.contentPresenter.Content = new Student()
+                {
+                    Name = "BongHoe Koko",
+                    Age = 25
+                };
+            }
+            else
+            {
+                this.contentPresenter.Content = new Teacher()
+                {
+                    Name = "BongHoe Koko",
+                    Age = 25,
+                    ClassName = "Math"
+                };
+
+            }
+            
+
         }
     }
 }

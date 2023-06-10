@@ -8,56 +8,27 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Window.Resources>
-        <ControlTemplate x:Key="RoundButtonTemplate"
-                         TargetType="{x:Type Button}">
-            <Grid>
-                <ContentPresenter Content="{TemplateBinding Property=Content}"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Panel.ZIndex="1"></ContentPresenter>
-                <Border CornerRadius="20"
-                        Background="{TemplateBinding Property=Background}"></Border>
-            </Grid>
-        </ControlTemplate>
-        <ControlTemplate x:Key="RectButtonTemplate"
-                         TargetType="{x:Type Button}">
+        <ControlTemplate TargetType="{x:Type Button}"
+                         x:Key="RoundButtonTemplate">
             <Grid>
                 <ContentPresenter Content="{TemplateBinding Content}"
                                   HorizontalAlignment="Center"
                                   VerticalAlignment="Center"
                                   Panel.ZIndex="1"></ContentPresenter>
-                <Border Background="{TemplateBinding Property=Background}"></Border>
+                <Border Background="{TemplateBinding Background}"
+                        CornerRadius="20"
+                        Panel.ZIndex="0"></Border>
             </Grid>
         </ControlTemplate>
-        <ControlTemplate TargetType="{x:Type Button}">
-            <Grid>
-                <ContentPresenter Content="{TemplateBinding Content}"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Panel.ZIndex="1"></ContentPresenter>
-                <Border Background="{TemplateBinding Property=Background}"></Border>
-            </Grid>
-        </ControlTemplate>
+        
     </Window.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="0"
-                Template="{StaticResource RoundButtonTemplate}"
-                Content="There is no cow level"
-                Background="Red"
-                Margin="10"
-                Foreground="White">
-        </Button>
-        <Button Grid.Column="1"
-                Template="{StaticResource RectButtonTemplate}"
-                Content="There is no cow level"
-                Background="Blue"
-                Margin="10"
-                Foreground="White"></Button>
-    </Grid>
+    <Button Content="test">
+        <Button.Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Red"></Setter>
+                <Setter Property="Template" Value="{StaticResource RoundButtonTemplate}"></Setter>
+            </Style>
+        </Button.Style>
+    </Button>
 </Window>

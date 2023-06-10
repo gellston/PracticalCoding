@@ -9,19 +9,35 @@
     <UniformGrid Columns="2"
                  Rows="2">
         
-        <Button Content="Implicit style"></Button>
+        <Button Content="Implicit style"
+                FontWeight="Bold"
+                FontSize="15"></Button>
         <Button Content="Explicit style"
-                Style="{StaticResource RedButton}"></Button>
+                Style="{StaticResource RedButton}"
+                FontWeight="Bold"></Button>
         <Button Content="Extended style"
-                Style="{StaticResource ExtendedButton}"></Button>
-        <Button Content="Local style">
-            <Button.Resources>
+                Style="{StaticResource ExtendedButton}"
+                FontWeight="Bold"></Button>
+        <Button Content="Extended style"
+                Style="{StaticResource ExtendedButton}"
+                FontWeight="Bold"></Button>
+        <Button Content="Extended style"
+                Style="{StaticResource ExtendedButton}"
+                FontWeight="Bold"></Button>
+        <Button Content="Extended style"
+                Style="{StaticResource ExtendedButton}"
+                FontWeight="Bold"></Button>
+
+        <Grid>
+            <Grid.Resources>
                 <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="Blue"></Setter>
-                    <Setter Property="Foreground" Value="White"></Setter>
-                    <Setter Property="FontSize" Value="20"></Setter>
+                    <Setter Property="Background" Value="Tomato"></Setter>
                 </Style>
-            </Button.Resources>
-        </Button>
+            </Grid.Resources>
+            <Button Content="Local style">
+               
+            </Button>
+        </Grid>
+        
     </UniformGrid>
 </Window>

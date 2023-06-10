@@ -6,71 +6,46 @@
         xmlns:local="clr-namespace:WPFDataTemplateExample"
         xmlns:model="clr-namespace:WPFDataTemplateExample.Model"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        x:Name="view">
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <ContentPresenter Grid.Column="0"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center">
-            <ContentPresenter.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0"
+                          x:Name="contentPresenter">
+            <Button.Resources>
                 <DataTemplate DataType="{x:Type model:Student}">
-                    <Grid Background="Orange">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="50"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Grid.Row="0"></TextBlock>
-                        <TextBlock Text="{Binding Age}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Grid.Row="1"></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Name}" Foreground="Red" Grid.Column="0"></TextBlock>
+                        <TextBlock Text="{Binding Age}" Foreground="Green" Grid.Column="1"></TextBlock>
                     </Grid>
                 </DataTemplate>
-            </ContentPresenter.Resources>
-            <ContentPresenter.Content>
-                <model:Student Name="BongHoeKoo"
-                               Age="18"
-                               ></model:Student>
-            </ContentPresenter.Content>
-        </ContentPresenter>
-        
-        <ContentPresenter Grid.Column="1"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center">
-            <ContentPresenter.Resources>
                 <DataTemplate DataType="{x:Type model:Teacher}">
-                    <Grid Background="Green">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="50"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Grid.Row="0"></TextBlock>
-                        <TextBlock Text="{Binding Age}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Grid.Row="1"></TextBlock>
-                        <TextBlock Text="{Binding ClassName}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Grid.Row="2"></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Name}" Foreground="Red" Grid.Column="0"></TextBlock>
+                        <TextBlock Text="{Binding Age}" Foreground="Green" Grid.Column="1"></TextBlock>
+                        <TextBlock Text="{Binding ClassName}" Foreground="Green" Grid.Column="2"></TextBlock>
                     </Grid>
                 </DataTemplate>
-            </ContentPresenter.Resources>
-            <ContentPresenter.Content>
-                <model:Teacher Name="John"
-                               Age="18"
-                               ClassName="Mathmathics"></model:Teacher>
-            </ContentPresenter.Content>
-        </ContentPresenter>
+            </Button.Resources>
+        </Button>
+        <Button Content="test click"
+                x:Name="tesetButton"
+                Grid.Row="1"
+                Click="tesetButton_Click"></Button>
+
     </Grid>
 </Window>

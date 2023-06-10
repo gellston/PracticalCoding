@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPFDataTemplateExample.Model
+namespace WPFPropertyTriggerExample.Model
 {
-    public class Student
+    public class Person
     {
 
-        public Student() {
+        public Person() { }
 
-        }
 
         public string Name { get; set; } = "";
-        public int Age { get; set; } = 25;
-        
     }
 }
