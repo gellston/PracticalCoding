@@ -23,10 +23,13 @@ namespace WPFAnimationExample
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new Model()
+            var model = new Model()
             {
                 IsChecked = false,
             };
+
+
+            this.DataContext = model;
         }
     }
 }
