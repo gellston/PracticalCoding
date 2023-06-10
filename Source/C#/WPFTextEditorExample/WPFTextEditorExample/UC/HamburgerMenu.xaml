@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="WPFTextEditorExample.UC.HamburgerMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFTextEditorExample.UC"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="view">
+    <DockPanel>
+        <Grid Width="50"
+              DockPanel.Dock="Left"
+              Panel.ZIndex="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=view, Path=IsOpen ,Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Width"
+                                                         Duration="0:0:0.5"
+                                                         To="400">
+                                            <DoubleAnimation.EasingFunction>
+                                                <ElasticEase x:Name="myElasticEase" Oscillations="3" 
+                                                             Springiness="1" EasingMode="EaseOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Width"
+                                                         Duration="0:0:0.5"
+                                                         To="50">
+                                            <DoubleAnimation.EasingFunction>
+                                                <ExponentialEase Exponent="6" EasingMode="EaseOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            <ToggleButton Grid.Row="0"
+                          Grid.Column="0"
+                          IsChecked="{Binding ElementName=view, Path=IsOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ToggleButton.Content>
+                    <Image Source="pack://application:,,,/WPFTextEditorExample;component/Image/icons8_menu_filled_100px_1.png"></Image>
+                </ToggleButton.Content>
+                <!--<ToggleButton.Style>
+                    <Style TargetType="{x:Type ToggleButton}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter ></ContentPresenter>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ToggleButton.Style>-->
+            </ToggleButton>
+            <Grid Grid.Column="0"
+                  Grid.Row="1"></Grid>
+            <!--<Grid Grid.Column="1"
+                  Grid.Row="1"
+                  Background="Orange"></Grid>-->
+            <ContentPresenter Content="{Binding ElementName=view, Path=LeftMenuContent, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                              Grid.Row="1"
+                              Grid.Column="1"></ContentPresenter>
+        </Grid>
+        <Grid Panel.ZIndex="0">
+            <ContentPresenter Content="{Binding ElementName=view, Path=MainContent, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></ContentPresenter>
+        </Grid>
+    </DockPanel>
+</UserControl>

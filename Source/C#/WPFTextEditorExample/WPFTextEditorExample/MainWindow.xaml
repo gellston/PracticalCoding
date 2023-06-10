@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPFTextEditorExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTextEditorExample"
+        mc:Ignorable="d"
+        xmlns:uc="clr-namespace:WPFTextEditorExample.UC"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <uc:HamburgerMenu>
+            <uc:HamburgerMenu.MainContent>
+                <DockPanel Background="Red">
+                </DockPanel>
+            </uc:HamburgerMenu.MainContent>
+            <uc:HamburgerMenu.LeftMenuContent>
+                <StackPanel Orientation="Vertical">
+                    <Button Height="50"
+                            Content="Open"></Button>
+                    <Button Height="50"
+                            Content="Save"></Button>
+                </StackPanel>
+            </uc:HamburgerMenu.LeftMenuContent>
+        </uc:HamburgerMenu>
+    </Grid>
+</Window>
