@@ -12,7 +12,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="View\MainWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\ButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UC\HamburgerMenu.xaml">

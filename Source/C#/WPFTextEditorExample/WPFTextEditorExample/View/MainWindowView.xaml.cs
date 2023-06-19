@@ -12,17 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFTextEditorExample.ViewModel;
 
-namespace WPFTextEditorExample
+namespace WPFTextEditorExample.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindowView : Window
     {
-        public MainWindow()
+        public MainWindowView()
         {
             InitializeComponent();
+
         }
     }
 }

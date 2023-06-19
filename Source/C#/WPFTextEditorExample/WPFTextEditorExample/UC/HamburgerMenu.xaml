@@ -10,7 +10,8 @@
     <DockPanel>
         <Grid Width="50"
               DockPanel.Dock="Left"
-              Panel.ZIndex="1">
+              Panel.ZIndex="1"
+              Background="#1A237E">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
@@ -25,6 +26,7 @@
             <Grid.Style>
                 <Style TargetType="{x:Type Grid}">
                     <Style.Triggers>
+                        
                         <DataTrigger Binding="{Binding ElementName=view, Path=IsOpen ,Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Value="True">
                             <DataTrigger.EnterActions>
                                 <BeginStoryboard>
@@ -60,23 +62,40 @@
 
             <ToggleButton Grid.Row="0"
                           Grid.Column="0"
+                          Margin="5"
                           IsChecked="{Binding ElementName=view, Path=IsOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 <ToggleButton.Content>
                     <Image Source="pack://application:,,,/WPFTextEditorExample;component/Image/icons8_menu_filled_100px_1.png"></Image>
                 </ToggleButton.Content>
-                <!--<ToggleButton.Style>
+                <ToggleButton.Style>
                     <Style TargetType="{x:Type ToggleButton}">
+                        
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="#9965f4"></Setter>
+                                <Setter Property="BorderThickness" Value="2"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
                         <Setter Property="Template">
                             <Setter.Value>
-                                <ControlTemplate>
+                                <ControlTemplate TargetType="ToggleButton">
                                     <Grid Background="{TemplateBinding Background}">
-                                        <ContentPresenter ></ContentPresenter>
+                                        <Border Panel.ZIndex="0"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                BorderBrush="{TemplateBinding BorderBrush}">
+                                            
+                                        </Border>
+                                        <ContentPresenter Content="{TemplateBinding Content}"
+                                                          Panel.ZIndex="1"
+                                                          Margin="5"></ContentPresenter>
                                     </Grid>
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
                     </Style>
-                </ToggleButton.Style>-->
+                </ToggleButton.Style>
             </ToggleButton>
             <Grid Grid.Column="0"
                   Grid.Row="1"></Grid>
