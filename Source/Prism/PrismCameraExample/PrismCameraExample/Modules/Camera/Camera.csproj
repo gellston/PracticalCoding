@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Remove="Resources\ButtonStyle.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\Camera.Interface\Camera.Interface.csproj" />
+    <ProjectReference Include="..\..\Services\Camera.Service\Camera.Service.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ButtonStyle.xaml" />
+  </ItemGroup>
+</Project>
