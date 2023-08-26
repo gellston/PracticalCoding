@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,13 +20,15 @@ namespace WPFMVVMToolkitExample1.ViewModel
 
         #region Private Property
         private readonly ImageManagerService imageManagerService;
-
+        private readonly Func<List<ImageModel>, List<ImageViewModel>> imageModel2VMConverter;
         #endregion
 
         #region Constructor
-        public MainWindowViewModel(ImageManagerService _imageManagerService) {
+        public MainWindowViewModel(ImageManagerService _imageManagerService,
+                                   Func<List<ImageModel>, List<ImageViewModel>> _imageModel2VMConverter) {
 
             this.imageManagerService = _imageManagerService;
+            this.imageModel2VMConverter = _imageModel2VMConverter;
 
         }
         #endregion
@@ -38,34 +41,25 @@ namespace WPFMVVMToolkitExample1.ViewModel
 
 
         #region Command
+
         [RelayCommand]
         public void OpenImage()
         {
             try
             {
 
-                var images = imageManagerService.LoadImages("C://Github//test");
-
-                //////////////////
-                /////////////////////
-                /////////////////////
-                /////////////////////
-                /////////////////////
-                List<ImageViewModel> imageViewModels = new List<ImageViewModel>();
-                foreach (var image in images)
-                {
-                    var imageViewModel = App.Current.Services.GetService<ImageViewModel>();
-                    imageViewModel.Model = image;
-                    imageViewModels.Add(imageViewModel);
-                }
-                //////////////////
-                /////////////////////
-                /////////////////////
-                /////////////////////
-                /////////////////////
+                CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+                dialog.IsFolderPicker = true;
+                var result = dialog.ShowDialog();
+                if (result != CommonFileDialogResult.Ok)
+                    return;
 
 
-                this.ImageVMCollection = new ObservableCollection<ImageViewModel>(imageViewModels);
+                var images = imageManagerService.LoadImages(dialog.FileName);
+                var viewModels = imageModel2VMConverter(images);
+
+
+                this.ImageVMCollection = new ObservableCollection<ImageViewModel>(viewModels);
 
             }
             catch (Exception ex)
@@ -79,8 +73,8 @@ namespace WPFMVVMToolkitExample1.ViewModel
         {
             try
             {
+                
                 this.ImageVMCollection.Clear();
-
             }
             catch (Exception ex)
             {

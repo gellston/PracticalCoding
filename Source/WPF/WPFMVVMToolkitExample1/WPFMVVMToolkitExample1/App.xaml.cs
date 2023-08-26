@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WPFMVVMToolkitExample1.Model;
 using WPFMVVMToolkitExample1.Service;
 using WPFMVVMToolkitExample1.ViewModel;
 
@@ -20,6 +21,7 @@ namespace WPFMVVMToolkitExample1
         public App()
         {
             Services = ConfigureServices();
+
 
             this.InitializeComponent();
         }
@@ -39,37 +41,35 @@ namespace WPFMVVMToolkitExample1
         /// </summary>
         private static IServiceProvider ConfigureServices()
         {
-
             var services = new ServiceCollection();
-
-
-            Action<int> callback = (id) =>
-            {
-
-            };
-
-            callback(512);
-
-
-            Func<int, bool> callbac2 = (id) =>
-            {
-
-                return false;
-            };
-
 
             //ViewModel
             services.AddSingleton<MainWindowViewModel>();
             services.AddTransient<ImageViewModel>();
+            services.AddTransient<Func<List<ImageModel>, List<ImageViewModel>>>((serviceProvider) =>
+            {
 
+                Func<List<ImageModel>, List<ImageViewModel>> converter = (models)=>{
 
+                    List<ImageViewModel> viewModels = new List<ImageViewModel>();
+
+                    foreach (var model in models)
+                    {
+                        //컨버터 중간 과정 
+                        var imageViewModel = serviceProvider.GetService<ImageViewModel>();
+                        imageViewModel.Model = model;
+                        viewModels.Add(imageViewModel);
+                    }
+                    return viewModels;
+                };
+  
+                return converter;
+            });
 
 
             //Service
             services.AddSingleton<ImageManagerService>();
-
-
-
+ 
             return services.BuildServiceProvider();
         }
     }
