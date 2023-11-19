@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.8.0.20230708" />
+    <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.8.0.20230708" />
+  </ItemGroup>
+
+</Project>

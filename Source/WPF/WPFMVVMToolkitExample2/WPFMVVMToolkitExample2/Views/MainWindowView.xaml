@@ -1,0 +1,65 @@
+﻿<Window x:Class="WPFMVVMToolkitExample2.Views.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMVVMToolkitExample2"
+        xmlns:vm="clr-namespace:ViewModel;assembly=ViewModel"
+        xmlns:v="clr-namespace:View;assembly=View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1024" Width="1280"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainWindowViewModel}">
+
+
+    <DockPanel>
+        <UniformGrid Height="50"
+                    DockPanel.Dock="Bottom"
+                     Rows="1">
+            <Button Content="CreateCamera"
+                    Command="{Binding CreateCameraCommand}"></Button>
+            <Button Content="RemoveCamera"
+                   Command="{Binding RemoveCameraCommand}"></Button>
+
+        </UniformGrid>
+        
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ContentPresenter Content="{Binding CurrentCameraViewModel, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                              Grid.Column="0">
+                <ContentPresenter.Resources>
+                    <DataTemplate DataType="{x:Type vm:CameraViewModel}">
+                        <v:CameraView></v:CameraView>
+                    </DataTemplate>
+                </ContentPresenter.Resources>
+            </ContentPresenter>
+            <ListView Grid.Column="1"
+                      ItemsSource="{Binding CameraViewModelCollection}"
+                      SelectedItem="{Binding CurrentCameraViewModel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      HorizontalContentAlignment="Stretch"
+                      VerticalContentAlignment="Stretch">
+                <ListView.Resources>
+                    <DataTemplate DataType="{x:Type vm:CameraViewModel}">
+                        <Grid Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Name}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding UsbID}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Grid.Column="1"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.Resources>
+            </ListView>
+        </Grid>
+    </DockPanel>
+</Window>
