@@ -16,6 +16,7 @@
                                           Icon="Close"></resource:KooIcon>
                     </Border>
                     <ControlTemplate.Triggers>
+                       
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#E04343"></Setter>
                         </Trigger>

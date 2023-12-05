@@ -18,9 +18,24 @@ namespace PrismExplorer.Support.UI.Units
     
     public class MaximizeButton : Button
     {
+
+        #region Dependency Property
+        public static DependencyProperty IsMaximizedProperty = DependencyProperty.Register("IsMaximized", typeof(bool), typeof(MaximizeButton), new PropertyMetadata(false));
+        #endregion
+
+        #region Property
+        public bool IsMaximized
+        {
+            get => (bool)GetValue(IsMaximizedProperty);
+            set=> SetValue(IsMaximizedProperty, value);
+        }
+        #endregion
+
+        #region Static Constructor
         static MaximizeButton()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MaximizeButton), new FrameworkPropertyMetadata(typeof(MaximizeButton)));
         }
+        #endregion
     }
 }
