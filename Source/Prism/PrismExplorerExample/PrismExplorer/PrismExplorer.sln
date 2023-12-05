@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismExplorer", "PrismExplorer\PrismExplorer.csproj", "{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismExplorer.Support", "PrismExplorer.Support\PrismExplorer.Support.csproj", "{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismExplorer.Resource", "PrismExplorer.Resource\PrismExplorer.Resource.csproj", "{958E0348-3FE2-4F33-BB00-702EB23122CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Debug|x64.ActiveCfg = Debug|x64
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Debug|x64.Build.0 = Debug|x64
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Release|x64.ActiveCfg = Release|x64
+		{ACA779CD-EA14-4E75-90C1-75FD9AD0F88F}.Release|x64.Build.0 = Release|x64
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Debug|x64.ActiveCfg = Debug|x64
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Debug|x64.Build.0 = Debug|x64
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Release|x64.ActiveCfg = Release|Any CPU
+		{348E2CBE-50D7-4DD0-AD50-10C9834A9AB3}.Release|x64.Build.0 = Release|Any CPU
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Debug|x64.ActiveCfg = Debug|x64
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Debug|x64.Build.0 = Debug|x64
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Release|x64.ActiveCfg = Release|Any CPU
+		{958E0348-3FE2-4F33-BB00-702EB23122CE}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB000751-1193-4CF0-B026-6A809105EFFA}
+	EndGlobalSection
+EndGlobal

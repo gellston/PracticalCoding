@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/PrismExplorer.Support;component/Themes/Units/CloseButton.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/PrismExplorer.Support;component/Themes/Units/MaximizeButton.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/PrismExplorer.Support;component/Themes/Units/MinimizeButton.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/PrismExplorer.Support;component/Themes/Units/DarkScrollViewer.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/PrismExplorer.Support;component/Themes/Units/DarkWindow.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
