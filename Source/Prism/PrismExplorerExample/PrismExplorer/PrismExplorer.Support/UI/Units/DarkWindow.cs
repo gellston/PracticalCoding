@@ -43,8 +43,8 @@ namespace PrismExplorer.Support.UI.Units
             {
                 btn.Click += (s, o) =>
                 {
-                   
-                }
+
+                };
             }
         }
     }
