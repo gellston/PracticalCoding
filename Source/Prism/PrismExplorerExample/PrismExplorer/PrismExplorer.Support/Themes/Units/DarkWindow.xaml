@@ -39,12 +39,26 @@
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="5"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
+                            <Border Grid.ColumnSpan="5"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Background="#222222"></Border>
+
+                            <TextBlock Text="{TemplateBinding Title}"
+                                       Grid.ColumnSpan="4"
+                                       Grid.Column="0"
+                                       Grid.Row="0"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="White"></TextBlock>
+
                             <Border Grid.ColumnSpan="4"
                                     Grid.Column="0"
                                     Grid.Row="0"
-                                    Background="#222222"
-                                    x:Name="PART_Bar"></Border>
+                                    x:Name="PART_Bar"
+                                    Background="Transparent"></Border>
 
                             <control:MinimizeButton Grid.Column="1"
                                                     Grid.Row="0"
@@ -60,7 +74,7 @@
                                                  x:Name="PART_CloseButton"></control:CloseButton>
 
                             <ContentPresenter Grid.Row="1"
-                                              Grid.ColumnSpan="4"
+                                              Grid.ColumnSpan="5"
                                               ContentTemplate="{TemplateBinding ContentTemplate}"
                                               ContentSource="Content">
                                 

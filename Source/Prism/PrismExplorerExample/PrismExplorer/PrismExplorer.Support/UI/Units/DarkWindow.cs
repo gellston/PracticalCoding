@@ -18,10 +18,24 @@ namespace PrismExplorer.Support.UI.Units
 
     public class DarkWindow : Window
     {
+
+        #region Private Property
+        private MaximizeButton maximizeButton;
+        #endregion
+
         #region Static Constructor
         static DarkWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DarkWindow), new FrameworkPropertyMetadata(typeof(DarkWindow)));
+        }
+
+        public DarkWindow()
+        {
+
+            this.StateChanged += (s, o) =>
+            {
+                maximizeButton.IsMaximized = this.WindowState == WindowState.Maximized;
+            };
         }
         #endregion
 
@@ -53,6 +67,23 @@ namespace PrismExplorer.Support.UI.Units
             }
             
         }
+
+
+        private void Bar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void Bar_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                this.WindowState = this.WindowState != WindowState.Maximized ? WindowState.Maximized : WindowState.Normal;
+            }
+        }
         #endregion
 
         #region Event Handler
@@ -77,12 +108,27 @@ namespace PrismExplorer.Support.UI.Units
 
             if(GetTemplateChild("PART_MaxButton") is MaximizeButton maxbtn)
             {
+                maximizeButton = maxbtn;
                 maxbtn.Click += (s, o) =>
                 {
-                    this.WindowState = this.WindowState != WindowState.Maximized ? WindowState.Maximized : WindowState.Normal;
+                    
+                    this.WindowState = maximizeButton.IsMaximized == false ? WindowState.Maximized : WindowState.Normal;
                 };
             }
+
+            if(GetTemplateChild("PART_Bar") is Border bar)
+            {
+                bar.MouseDown += Bar_MouseDown;
+                bar.PreviewMouseLeftButtonDown += Bar_PreviewMouseLeftButtonDown;
+            }
+
+            maximizeButton.IsMaximized = this.WindowState == WindowState.Maximized;
         }
+
+
+
+
+
         #endregion
     }
 }

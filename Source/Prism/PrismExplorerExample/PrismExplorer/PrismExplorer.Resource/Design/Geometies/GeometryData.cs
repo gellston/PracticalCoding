@@ -11,5 +11,6 @@ namespace PrismExplorer.Resource.Design.Geometies
         public static string Close => GeometryConverter.GetData();
         public static string Minimize => GeometryConverter.GetData();
         public static string Maximize => GeometryConverter.GetData();
+        public static string Restore => GeometryConverter.GetData();
     }
 }

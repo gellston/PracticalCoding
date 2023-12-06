@@ -12,7 +12,8 @@
                         <resource:KooIcon Fill="{TemplateBinding Foreground}"
                                           Width="16"
                                           Height="16"
-                                          Icon="Maximize"></resource:KooIcon>
+                                          Icon="Maximize"
+                                          x:Name="maximizeButton"></resource:KooIcon>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -20,6 +21,12 @@
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Background" Value="#B43838"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMaximized" Value="False">
+                            <Setter TargetName="maximizeButton" Property="Icon" Value="Restore"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMaximized" Value="True">
+                            <Setter TargetName="maximizeButton" Property="Icon" Value="Maximize"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

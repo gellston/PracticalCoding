@@ -1,5 +1,4 @@
-﻿using PrismExplorer.Support.UI.Units;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,18 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PrismExplorer.View
+namespace PrismExplorer.Support.UI.Units
 {
-    /// <summary>
-    /// MainWindowView.xaml에 대한 상호 작용 논리
-    /// </summary>
-    public partial class MainWindowView : DarkWindow
+    
+    public class FolderTreeView : TreeView
     {
-        public MainWindowView()
+        #region Static Constructor
+        static FolderTreeView()
         {
-            InitializeComponent();
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(FolderTreeView), new FrameworkPropertyMetadata(typeof(FolderTreeView)));
         }
+        #endregion
     }
 }

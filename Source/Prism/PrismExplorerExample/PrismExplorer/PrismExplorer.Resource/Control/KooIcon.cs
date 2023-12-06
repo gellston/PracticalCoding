@@ -18,7 +18,8 @@ namespace PrismExplorer.Resource.Control
         None,
         Close,
         Maximize,
-        Minimize
+        Minimize,
+        Restore
     }
     #endregion
 
