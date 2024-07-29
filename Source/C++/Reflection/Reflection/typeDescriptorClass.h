@@ -38,7 +38,7 @@ namespace reflect {
 #pragma endregion
 
 #pragma region Public Functions
-		REFLECT_API virtual void dump(const void* obj, int indentLevel) override;
+		REFLECT_API void dump(const void* obj, int indentLevel) override;
 #pragma endregion
 
 

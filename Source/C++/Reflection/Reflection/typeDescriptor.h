@@ -30,7 +30,7 @@ namespace reflect {
 
 #pragma region Public Functions
 		REFLECT_API virtual std::string getFullName() const;
-		REFLECT_API virtual void dump(const void* obj, int indentLevel = 0) {};
+		REFLECT_API virtual void dump(const void* obj, int indentLevel = 0) = 0;
 #pragma endregion
 	};
 }

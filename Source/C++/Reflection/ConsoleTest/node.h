@@ -8,24 +8,21 @@
 class node {
 
 	REFLECT()
-
+#pragma region Private Property
 private:
 	std::string key;
 	int value;
+#pragma endregion
 
 public:
+#pragma region Constructor
+	node(std::string key, int value);
+#pragma endregion
 
-
+#pragma region Destructor
+	~node();
+#pragma endregion
 
 };
 
-reflect::typeDescriptorClass node::reflection(node::initReflection); 
-void node::initReflection(reflect::typeDescriptorClass* typeDesc) {
-		using T = node;
-		typeDesc->name = "node";
-		typeDesc->size = sizeof(T);
-		typeDesc->members = {
-			REFLECT_CLASS_MEMBER(key)
-		};
-}
 #endif

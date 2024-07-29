@@ -132,13 +132,21 @@
     <ClCompile Include="reflection.cpp" />
     <ClCompile Include="typeDescriptor.cpp" />
     <ClCompile Include="typeDescriptorClass.cpp" />
+    <ClCompile Include="typeDescriptorDouble.cpp" />
+    <ClCompile Include="typeDescriptorInt.cpp" />
+    <ClCompile Include="typeDescriptorStdString.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="defaultResolver.h" />
+    <ClInclude Include="primitiveDescriptor.h" />
     <ClInclude Include="reflectAPI.h" />
     <ClInclude Include="reflection.h" />
     <ClInclude Include="typeDescriptor.h" />
     <ClInclude Include="typeDescriptorClass.h" />
+    <ClInclude Include="typeDescriptorDouble.h" />
+    <ClInclude Include="typeDescriptorInt.h" />
+    <ClInclude Include="typeDescriptorStdString.h" />
+    <ClInclude Include="typeResolver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

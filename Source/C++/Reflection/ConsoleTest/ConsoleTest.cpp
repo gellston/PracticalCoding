@@ -3,12 +3,30 @@
 
 #include <iostream>
 #include <vector>
-
+#include <reflection.h>
 
 #include "node.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    node test = {
+        "test",
+        512
+    };
+
+
+    auto descriptor = reflect::typeResolver<node>::get();
+    auto name = descriptor->name;
+
+
+    std::cout << "class name : " << name << std::endl;
+    std::cout << "dump : " << name << std::endl;
+    descriptor->dump(&test);
+
+
+
+    
+    
 }
 

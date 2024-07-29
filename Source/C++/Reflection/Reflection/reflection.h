@@ -2,9 +2,12 @@
 
 #include "typeDescriptor.h"
 #include "typeDescriptorClass.h"
+#include "defaultResolver.h"
+#include "typeResolver.h"
 
 
 #define REFLECT() \
+friend reflect::defaultResolver;\
 static reflect::typeDescriptorClass reflection;\
 static void initReflection(reflect::typeDescriptorClass*);
 
@@ -17,10 +20,12 @@ void node::initReflection(reflect::typeDescriptorClass* typeDesc) {\
 	typeDesc->members = {\
 
 
+
+#define REFLECT_CLASS_MEMBER(name)\
+{#name, offsetof(T, name), reflect::typeResolver<decltype(T::name)>::get()}, \
+
+
 #define REFLECT_CLASS_END() \
 	};\
 }\
 
-
-#define REFLECT_CLASS_MEMBER(name)\
-{#name, offsetof(T, name), nullptr},

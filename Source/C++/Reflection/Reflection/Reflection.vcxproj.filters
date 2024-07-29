@@ -24,6 +24,15 @@
     <ClCompile Include="typeDescriptorClass.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="typeDescriptorInt.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="typeDescriptorDouble.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="typeDescriptorStdString.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="reflection.h">
@@ -39,6 +48,21 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="defaultResolver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="typeResolver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="typeDescriptorInt.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="typeDescriptorDouble.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="typeDescriptorStdString.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="primitiveDescriptor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
