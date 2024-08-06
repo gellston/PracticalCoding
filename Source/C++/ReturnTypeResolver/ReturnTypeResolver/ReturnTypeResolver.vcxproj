@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="retTypeResolver.cpp" />
     <ClCompile Include="ReturnTypeResolver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="retTypeResolver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
